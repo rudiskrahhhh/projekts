@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Uzdevumi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Uzdevumu pārvaldnieks</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="btn btn-secondary">Atslēgties</button>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <button id="addTaskBtn" class="btn">Pievienot jaunu uzdevumu</button>
+            <div class="filter-group">
+                <label for="filterStatus">Statuss:</label>
+                <select id="filterStatus">
+                    <option value="all">Visi</option>
+                    <option value="completed">Pabeigti</option>
+                    <option value="pending">Nepabeigti</option>
+                </select>
+                <label for="sortBy">Kārtot pēc:</label>
+                <select id="sortBy">
+                    <option value="dueDate">Termiņa datuma</option>
+                    <option value="createdAt">Izveidošanas datuma</option>
+                    <option value="title">Nosaukuma</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="taskList" class="task-list">
+            <!-- Tasks will be loaded here -->
+        </div>
+        
+        <div id="notification" class="notification"></div>
+    </div>
+    
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
