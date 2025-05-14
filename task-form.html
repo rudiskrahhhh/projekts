@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Jauns uzdevums</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="formTitle">Jauns uzdevums</h1>
+            <button id="backBtn" class="btn btn-secondary">Atpakaļ</button>
+        </header>
+        
+        <form id="taskForm">
+            <input type="hidden" id="taskId">
+            <div class="form-group">
+                <label for="title">Nosaukums*</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Apraksts</label>
+                <textarea id="description" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="dueDate">Termiņš*</label>
+                <input type="date" id="dueDate" required>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="completed">
+                    Pabeigts
+                </label>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Saglabāt</button>
+                <button type="button" id="cancelBtn" class="btn btn-secondary">Atcelt</button>
+            </div>
+        </form>
+        
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+    
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
